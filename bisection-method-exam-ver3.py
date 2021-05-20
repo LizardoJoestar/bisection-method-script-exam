@@ -6,7 +6,8 @@ Por Medina Peraza Caleb
 """
 import math
 # <global variables>
-header_list = ["#", "x_i", "x_u", "f(x_i)", "x_r", "f(x_r)", "E_a", "E_r (%)", "Sign"]
+header_list = ["#", "x_i", "x_u",
+               "f(x_i)", "x_r", "f(x_r)", "E_a", "E_r (%)", "Sign"]
 var_list = []
 # <state variables>
 x_i = 0
@@ -130,7 +131,8 @@ def print_result():
         iter += 1
     if E_r == "100.0 %":
         E_r = "null"
-    print(f"Aproximate root is {x_r}, with error of {E_r}, on iteration {iter-1}.\n")
+    print(
+        f"Aproximate root is {x_r}, with error of {E_r}, on iteration {iter-1}.\n")
 
 # Absolute (relative, in %) error function:
 
@@ -155,7 +157,8 @@ def limits_input():
         x_u = float(input(f"Input upper limit x_u: "))
 
         if (function(string, x_i)*function(string, x_u) >= 0):
-            print("Limits dont't bracket any root (f(x_i) * f(x_u) > 0). Input again until product is < 0.\n")
+            print(
+                "Limits dont't bracket any root (f(x_i) * f(x_u) > 0). Input again until product is < 0.\n")
             limits_input()
 
         print("\n")
@@ -190,7 +193,8 @@ def max_error_input():
     global max_error
 
     try:
-        max_error = float(input("Input the maximum error allowed, between 0 and 100: "))
+        max_error = float(
+            input("Input the maximum error allowed, between 0 and 100: "))
         if max_error <= 0 or max_error >= 100:
             print("\nError must be between 0 and 100%. Input error again.")
             max_error_input()
@@ -292,6 +296,7 @@ def truncate(number, decimals=0):
 
     factor = 10.0 ** decimals
     return math.trunc(number * factor) / factor
+
 
 def init():
     restart_variables()
