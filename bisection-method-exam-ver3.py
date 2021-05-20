@@ -6,8 +6,7 @@ Por Medina Peraza Caleb
 """
 import math
 # <global variables>
-header_list = ["#", "x_i", "x_u",
-               "f(x_i)", "x_r", "f(x_r)", "E_a", "E_r (%)", "Sign"]
+header_list = ["#", "x_i", "x_u", "f(x_i)", "x_r", "f(x_r)", "E_a", "E_r (%)", "Sign"]
 var_list = []
 # <state variables>
 x_i = 0
