@@ -307,4 +307,6 @@ def init():
     try_again()
 
 
-init()
+if __name__ == "__main__":
+    init()
+
